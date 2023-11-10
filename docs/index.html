@@ -8,15 +8,181 @@
   <link rel="icon" href="images/svg/logo_site-logo_znak.svg">
   
   <title>This Site Title</title>
-  <script type="module" crossorigin src="./assets/main-ca8cdecb.js"></script>
-  <link rel="stylesheet" href="./assets/index-fcf31bed.css">
+  <script type="module" crossorigin src="./assets/main-2c41d6dd.js"></script>
+  <link rel="stylesheet" href="./assets/index-6387d485.css">
 </head>
 
 <body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__contents container">
+        <div class="header__content">
+          <nav class="header__menu" style="display: none;">
+            <h1 class="header__title">ЛИЧНЫЙ КАБИНЕТ</h1>
+            <ul class="header__list">
+              <li class="header__item"><a class="header__link" href="/">Вход в Личный кабинет</a></li>
+            </ul>
+            <h2 class="header__title">КАК ЭТО РАБОТАЕТ</h2>
+            <ul class="header__list">
+              <li class="header__item"><a class="header__link" href="/">Условия использования сервиса</a></li>
+              <li class="header__item"><a class="header__link" href="/">Способы оплаты</a></li>
+              <li class="header__item"><a class="header__link" href="/">Часто задаваемые вопросы</a></li>
+              <li class="header__item"><a class="header__link" href="/">Служба поддержки</a></li>
+            </ul>
+          </nav>
+          <div class="hamburger hamburger-js">
+            <span class="hamburger__plank"></span>
+            <span class="hamburger__plank"></span>
+            <span class="hamburger__plank"></span>
+          </div>
+          <a href="./" class="logo">
+            <img src="images/svg/logo_site-logo.svg" class="logo__img" alt="logo">
+          </a>
+          <address class="contacts">
+            <div class="contacts__help">
+              <img src="images/svg/ic_help.svg" class="contacts__img" alt="help">
+            </div>
+            <div class="contacts__description">
+              <p class="contacts__text">
+                Тел. поддержки
+              </p>
+              <a href="tel:+88001234567" class="contacts__tel">
+                8 800 123-45-67
+              </a>
+              <a class="contacts__link" href="/">
+                Написать письмо
+              </a>
+            </div>
+          </address>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="search container">
+        <div class="search__contents">
+          <h2 class="search__title">
+            Поиск начислений
+          </h2>
+          <div class="search__inner">
+            <form id="search-form" action="/search" method="GET">
+              <input type="search" class="search__input" name="q" placeholder="Введите данные для поиска">
+              <button type="button" class="search__button">Найти</button>
+            </form>
+          </div>
+          <p class="search__text">
+            Чем больше параметров введено, тем полнее результаты поиска
+          </p>
+        </div>
+      </section>
+      <section class="description container">
+        <div class="description__nav">
+          <h2 class="description__title">
+            Здесь можно оплатить
+          </h2>
+          <h2 class="description__title" style="display: none;">
+            Узнайте, как оплатить
+          </h2>
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item"><a class="menu__link" href="#traffic">Штрафы ГИБДД</a></li>
+              <li class="menu__item"><a class="menu__link" href="#court-debts">Судебные задолженности</a></li>
+              <li class="menu__item"><a class="menu__link" href="#taxes">Налоги</a></li>
+              <li class="menu__item"><a class="menu__link" href="#services">Услуги Росреестра</a></li>
+              <li class="menu__item"><span class="menu__text">и другие услуги</span></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="description__contet">
+          <ul class="description__items">
+            <li class="description__item">
+              <div class="description__help" style="display: none;">
+                <img src="images/svg/ic_gibdd1.svg" class="description__img" alt="help">
+              </div>
+              <h3 class="description__subject">
+                Штрафы ГИБДД
+              </h3>
+              <div class="description__aside">
+                <p class="description__text">
+                  Для поиска укажите номера водительского удостоверения и свидетельства о регистрации ТС или номер
+                  штрафа.
+                </p>
+                <p class="description__text">
+                  Если у вас есть на руках постановление о штрафе, вы можете указать реквизиты самостоятельно.
+                </p>
+                <h4 class="description__subtitle">
+                  ПЛАТИТЬ ВОВРЕМЯ — ДЕШЕВЛЕ!
+                </h4>
+                <p class="description__text">
+                  В первые 20 дней после выдачи постановления штраф можно оплатить со скидкой 50%. Для своевременной
+                  оплаты штрафов настройте уведомления в Личном кабинете.
+                </p>
+              </div>
+            </li>
+          </ul>
+          <div class="description__content">
+            <picture class="description__img">
+              <source media="(min-width: 800px)" srcset="images/img/pic_block1@2x.png">
+              <img src="images/img/pic_block1.png" alt="Сотрудник ГИБДД указывает жезлом влево" style="width:auto;">
+            </picture>
+          </div>
+        </div>
+      </section>
+      <section class="partners container">
+        <div class="partners__contents">
+          <h2 class="partners__title">
+            С нами работают
+          </h2>
+          <ul class="partners__items">
+            <li class="partners__item">
+              <a href="./" class="partners__logo">
+                <img src="images/svg/logo_partner1.svg" class="partners__img" alt="Партнёр 1">
+              </a>
+              <p class="partners__text">
+                Партнёр 1
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__contents container">
+        <div class="footer__copyright">
+          <p class="footer__text">©© 2012 – 2020 ООО</p>
+          <p class="footer__text">ООО «Название компании»</p>
+        </div>
+        <div class="footer__logo">
+          <picture class="footer__img">
+            <source media="(min-width: 800px)" srcset="images/img/comodossl-trustlogo2@2x.png">
+            <img src="images/img/comodossl-trustlogo2.png" alt="" style="width:auto;">
+          </picture>
+        </div>
+      </div>
+    </footer>
+  </div>
 
-  <h1>Hello world!</h1>
-
-
+  <div class="modal" style="display: none;">
+    <div class="modal__login modal__main" style="display: block;">
+      <div class="modal__content modal__content--login">
+        <button class="modal__close-button">
+          <img src="images/svg/ic_close.svg" alt="закрыть модальное окно" class="modal__img modal__close-img">
+        </button>
+        <h2 class="modal__headline">
+          Введите логин и пароль для входа в Личный кабинет
+        </h2>
+        <form class="modal__form">
+          <input class="modal__input" id="emailOrCard" type="text" required="" placeholder="Логин">
+          <input class="modal__input" id="passwordLogin" type="password" name="password" pattern=".{8,}"
+            placeholder="Пароль" title="Пароль должен содержать не менее 8 символов" required="">
+          <button class="modal__button modal__log-in-button">Log In</button>
+          <div class="modal__forgot">
+            <div class="modal__register-button modal__style-button">Напомнить пароль</div>
+            <div class="modal__register-button modal__style-button">Регистрация</div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
 </body>
 

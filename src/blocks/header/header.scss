@@ -1,0 +1,49 @@
+.header {
+  $self: &;
+
+  z-index: 1;
+	position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+
+  &__contents {}
+
+  &__content {}
+
+  &__menu {
+    z-index: -1;
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    height: 733px;
+    background: var(--unnamed-color-ffffff);
+    opacity: 0;
+    transform: translateX(-100%);
+
+    &--active {
+      z-index: 1;
+      opacity: 0.95;
+      transform: translateX(0);
+      transition: transform .6s ease, opacity .6s ease;
+    }
+
+    &--close {
+      transition: transform .6s ease, opacity .6s ease;
+    }
+  }
+
+  &__title {}
+
+  &__list {}
+
+  &__item {}
+
+  &__link {}
+
+}
