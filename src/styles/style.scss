@@ -1,76 +1,6 @@
 @import "layout/layout.scss";
 @include reset();
 
-// вызов показа текущего диапазона
-// body {
-//   @include screen-media();
-// }
-
-// Import media-query helper
-@import "../../node_modules/include-media/dist/_include-media.scss";
-
-$breakpoints: ('xxxs': 360px,
-  'xxs': 480px,
-  'xs': 640px,
-  'sm': 780px,
-  'md': 960px,
-  'lg': 1100px,
-  'xlg': 1280px,
-  'xxlg': 1440px,
-  'xxxlg': 1680px,
-  'xxxxlg': 1920px);
-
-// отключение hover 
-$mouse-device: '(hover: hover) and (pointer: fine)';
-
-// fonts
-@include font-face("OpenSans-Regular", "OS-R");
-@include font-face("OpenSans-SemiBold", "OS-SB");
-
-// Import BEM blocks scss
-@import "../blocks/**/*.scss";
-
-// Определяем анимацию затухания  
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-}
-
-// Определяем анимацию проявления 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-body,
-html {
-  display: flex;
-  box-sizing: border-box;
-  min-height: 100vh;
-  flex-flow: column nowrap;
-  font-size: #{$basesize}px;
-  font-family: "OS-R", sans-serif;
-  line-height: 1.2;
-  color: $text;
-  background-color: $white;
-  scroll-behavior: smooth;
-  // overflow-x: hidden;
-}
-
-.preload * {
-  transition: none;
-}
-
 :root {
 
   /* Colors: */
@@ -185,4 +115,65 @@ html {
   line-height: var(--unnamed-line-spacing-24);
   letter-spacing: var(--unnamed-character-spacing-0);
   color: var(--unnamed-color-000000);
+}
+
+// вызов показа текущего диапазона
+// body {
+//   @include screen-media();
+// }
+
+// Import media-query helper
+@import "../../node_modules/include-media/dist/_include-media.scss";
+
+$breakpoints: (
+  'xxxs': 360px,
+  'xxs': 480px,
+  'xs': 640px,
+  'sm': 780px,
+  'md': 960px,
+  'lg': 1100px,
+  'xlg': 1280px,
+  'xxlg': 1440px,
+  'xxxlg': 1680px,
+  'xxxxlg': 1920px);
+
+// // отключение hover 
+// $mouse-device: '(hover: hover) and (pointer: fine)';
+
+// fonts
+@include font-face("OpenSans-Regular", "OS-R");
+@include font-face("OpenSans-SemiBold", "OS-SB");
+
+// Import BEM blocks scss
+@import "../blocks/**/*.scss";
+
+// Определяем анимацию затухания  
+@keyframes fadeOut {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+// Определяем анимацию проявления 
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+body,
+html {
+  display: flex;
+  box-sizing: border-box;
+  min-height: 100vh;
+  flex-flow: column nowrap;
+  font-size: #{$basesize}px;
+  font-family: "OS-R", sans-serif;
+  line-height: 1.2;
+  color: var(--unnamed-color-000000);
+  background-color: var(--unnamed-color-ffffff);
+  scroll-behavior: smooth;
+  // overflow-x: hidden;
+}
+
+.preload * {
+  transition: none;
 }

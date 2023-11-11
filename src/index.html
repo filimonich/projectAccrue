@@ -13,19 +13,19 @@
 <body>
   <div class="wrapper">
     <header class="header">
-      <div class="header__contents container">
+      <div class="header__contents">
         <div class="header__content">
           <nav class="header__menu">
             <h1 class="header__title">ЛИЧНЫЙ КАБИНЕТ</h1>
             <ul class="header__list">
-              <li class="header__item"><a class="header__link" href="/">Вход в Личный кабинет</a></li>
+              <li class="header__item"><a class="header__link header__list--login">Вход в Личный кабинет</a></li>
             </ul>
             <h2 class="header__title">КАК ЭТО РАБОТАЕТ</h2>
             <ul class="header__list">
-              <li class="header__item"><a class="header__link" href="/">Условия использования сервиса</a></li>
-              <li class="header__item"><a class="header__link" href="/">Способы оплаты</a></li>
-              <li class="header__item"><a class="header__link" href="/">Часто задаваемые вопросы</a></li>
-              <li class="header__item"><a class="header__link" href="/">Служба поддержки</a></li>
+              <li class="header__item"><a class="header__link" href="#">Условия использования сервиса</a></li>
+              <li class="header__item"><a class="header__link" href="#">Способы оплаты</a></li>
+              <li class="header__item"><a class="header__link" href="#">Часто задаваемые вопросы</a></li>
+              <li class="header__item"><a class="header__link" href="#">Служба поддержки</a></li>
             </ul>
           </nav>
           <div class="hamburger hamburger-js">
@@ -34,13 +34,14 @@
             <span class="hamburger__plank"></span>
           </div>
           <a href="./" class="logo">
-            <img src="images/svg/logo_site-logo.svg" class="logo__img" alt="logo">
+            <img src="images/svg/logo_site-logo.svg" class="logo__img"
+              alt="Cиний кошелёк и название компании This Site Title">
           </a>
-          <address class="contacts">
+          <div class="contacts contacts-js">
             <div class="contacts__help">
-              <img src="images/svg/ic_help.svg" class="contacts__img" alt="help">
+              <img src="images/svg/ic_help.svg" class="contacts__img" alt="Поддержка">
             </div>
-            <div class="contacts__description" style="display: none;">
+            <div class="contacts__description">
               <p class="contacts__text">
                 Тел. поддержки
               </p>
@@ -51,13 +52,13 @@
                 Написать письмо
               </a>
             </div>
-          </address>
+          </div>
         </div>
       </div>
     </header>
     <main class="main">
-      <section class="search container">
-        <div class="search__contents">
+      <section class="search">
+        <div class="search__contents container">
           <h2 class="search__title">
             Поиск начислений
           </h2>
@@ -94,7 +95,7 @@
           <ul class="description__items">
             <li class="description__item">
               <div class="description__help" style="display: none;">
-                <img src="images/svg/ic_gibdd1.svg" class="description__img" alt="help">
+                <img src="images/svg/ic_gibdd1.svg" class="description__img" alt="Жезл ГИБДД">
               </div>
               <h3 class="description__subject">
                 Штрафы ГИБДД
@@ -159,11 +160,35 @@
     </footer>
   </div>
 
-  <div class="modal" style="display: none;">
-    <div class="modal__login modal__main" style="display: block;">
+  <div class="modal modal-js">
+    <div class="modal__login modal__main">
       <div class="modal__content modal__content--login">
-        <button class="modal__close-button">
+        <!-- <button class="modal__close-button">
           <img src="images/svg/ic_close.svg" alt="закрыть модальное окно" class="modal__img modal__close-img">
+        </button> -->
+        <!-- <object type="image/svg+xml" data="images/svg/ic_close.svg" class="modal__close-button">
+          <img src="images/svg/ic_close.svg" class="modal__img modal__close-img" alt="закрыть модальное окно" />
+        </object> -->
+        <!-- <button class="modal__close-button">
+          <object type="image/svg+xml" data="images/svg/ic_close.svg"
+            class="modal__img modal__close-img modal__close-svg" id="modalCloseSvg"></object>
+        </button> -->
+        <!-- <button class="modal__close-button">
+          <embed type="image/svg+xml" src="images/svg/ic_close.svg" class="my-svg">
+        </button> -->
+        <!-- <button class="modal__close-button">
+          <span class="modal__img modal__close-img modal__close-svg"></span>
+        </button> -->
+        <button class="modal__close-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g class="ic_close" transform="translate(-6 -6)">
+              <rect id="Rectangle_31" data-name="Rectangle 31" width="24" height="24" transform="translate(6 6)"
+                fill="none" />
+              <path id="Union_3" data-name="Union 3"
+                d="M-778.527,850.174l-9.241,9.241-1.732-1.733,9.241-9.241-9.187-9.187,1.732-1.733,9.188,9.188,9.241-9.241,1.732,1.733-9.241,9.241,9.294,9.294-1.732,1.733Z"
+                transform="translate(796.5 -830.467)" />
+            </g>
+          </svg>
         </button>
         <h2 class="modal__headline">
           Введите логин и пароль для входа в Личный кабинет
