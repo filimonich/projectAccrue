@@ -5,9 +5,10 @@
   display: block;
   top: 17%;
   right: 2%;
-  cursor: pointer;
 
   &__help {
+    cursor: pointer;
+
     &:hover {
       filter: opacity(50%);
     }
@@ -16,12 +17,16 @@
   &__img {}
 
   &__description {
+    z-index: -1;
     position: absolute;
     display: none;
+    flex-direction: column;
     top: 50px;
     right: -4px;
     width: 241px;
     height: 149px;
+    padding: 25px 16px;
+    text-align: center;
     background-color: var(--unnamed-color-ffffff);
     box-shadow: 0px 3px 12px #00000033;
 
@@ -35,14 +40,36 @@
       border-left: 10px solid transparent;
       border-right: 10px solid transparent;
       border-bottom: 10px solid var(--unnamed-color-ffffff);
-      // border-bottom: 10px solid red;
     }
   }
 
-  &__text {}
+  &__text {
+    margin-bottom: 1px;
+    font:
+      var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-open-sans);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-000000);
+  }
 
-  &__tel {}
+  &__tel {
+    margin-bottom: 21px;
+    font:
+      var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) 28px/37px var(--unnamed-font-family-open-sans);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-000000);
+  }
 
-  &__link {}
+  &__link {
+    text-decoration: var(--unnamed-decoration-underline);
+    font:
+      var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-16)/21px var(--unnamed-font-family-open-sans);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-004685);
+    cursor: pointer;
+
+    &:hover {
+      filter: opacity(50%);
+    }
+  }
 
 }

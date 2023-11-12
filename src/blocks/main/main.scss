@@ -1,4 +1,29 @@
 .main {
-	$self: &;
+  position: relative;
 
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--unnamed-color-00468533);
+  }
+
+  &::before {
+    bottom: 10%;
+  }
+
+  &::after {
+    bottom: 20%;
+  }
+	
+	&__line {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--unnamed-color-00468533);
+  bottom: 30%;
 }
+}
+

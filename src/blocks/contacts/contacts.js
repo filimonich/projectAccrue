@@ -1,22 +1,22 @@
 (() => {
   document.addEventListener('DOMContentLoaded', () => {
-    const contactsElement = document.querySelector('.contacts-js');
-    const descriptionElement = contactsElement.querySelector(
-      '.contacts__description'
-    );
+    const contacts = document.querySelector('.contacts-js');
+    const description = contacts.querySelector('.contacts__description');
 
-    contactsElement.addEventListener('click', () => {
+    contacts.addEventListener('click', () => {
       if (
-        descriptionElement.style.display === 'none' ||
-        descriptionElement.style.display === ''
+        description.style.display === 'none' ||
+        description.style.display === ''
       ) {
-        descriptionElement.style.display = 'block';
-        descriptionElement.style.animation = 'fadeIn .3s forwards'; // Добавляем анимацию проявления
+        description.style.zIndex = '10';
+        description.style.display = 'flex';
+        description.style.animation = 'fadeIn .3s forwards'; // Добавляем анимацию проявления
       } else {
-        descriptionElement.style.animation = 'fadeOut .3s forwards'; // Добавляем анимацию затухания
+        description.style.zIndex = '-1';
+        description.style.animation = 'fadeOut .3s forwards'; // Добавляем анимацию затухания
         // Ждем окончания анимации, прежде чем скрыть элемент
         setTimeout(() => {
-          descriptionElement.style.display = 'none';
+          description.style.display = 'none';
         }, 1000);
       }
     });
