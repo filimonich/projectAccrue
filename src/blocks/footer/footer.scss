@@ -1,24 +1,36 @@
 .footer {
-	$self: &;
+  $self: &;
 
-	&__contents {
+  background: var(--unnamed-color-00468533) 0% 0% no-repeat padding-box;
 
-	}
+  &__contents {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: 0 auto;
+    padding: 33px 0;
+  }
 
-	&__copyright {
+  &__copyright {
+    padding-top: 10px;
+    font:
+      var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-16)/21px var(--unnamed-font-family-open-sans);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-000000);
+  }
 
-	}
+  &__text {
 
-	&__text {
+    &:last-child {
+      letter-spacing: .5px;
+    }
+  }
 
-	}
+  &__logo {
+    width: 79px;
+    margin-right: 3px;
+  }
 
-	&__logo {
-
-	}
-
-	&__img {
-
-	}
+  &__img {}
 
 }
