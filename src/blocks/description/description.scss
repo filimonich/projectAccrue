@@ -100,7 +100,12 @@
     }
   }
 
-  &__items {}
+  &__items {
+
+    @include media('<lg') {
+      width: 120%;
+    }
+  }
 
   &__item {
     padding-right: 36px;

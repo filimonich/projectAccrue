@@ -21,7 +21,8 @@
     text-align: center;
     padding-top: 53px;
 
-    @include media('<=sm8') {
+    // @include media('<sm') {
+    @include media('<lg') {
       justify-content: space-evenly;
     }
   }
@@ -31,7 +32,8 @@
 
     // box-sizing: border-box;
 
-    @include media('<=sm8') {
+    // @include media('<sm') {
+    @include media('<lg') {
       width: 38%;
     }
   }
