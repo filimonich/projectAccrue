@@ -8,8 +8,8 @@
   <link rel="icon" href="images/svg/logo_site-logo_znak.svg">
   
   <title>This Site Title</title>
-  <script type="module" crossorigin src="./assets/main-63e3ad06.js"></script>
-  <link rel="stylesheet" href="./assets/index-ccf0e676.css">
+  <script type="module" crossorigin src="./assets/main-be384d11.js"></script>
+  <link rel="stylesheet" href="./assets/index-a18a14dc.css">
 </head>
 
 <body>
@@ -68,7 +68,8 @@
           <div class="search__inner">
             <form class="search__form" id="searchForm" action="/search" method="GET">
               <label for="searchInput" class="search__hidden" style="display: none;">Поиск</label>
-              <input type="search" class="search__input" name="q" placeholder="Введите данные для поиска">
+              <input type="search" id="searchInput" class="search__input" name="q"
+                placeholder="Введите данные для поиска">
               <button type="button" class="search__button">Найти</button>
             </form>
           </div>
@@ -77,12 +78,12 @@
           </p>
         </div>
       </section>
-      <section class="description container">
+      <section class="description description-js container">
         <div class="description__nav">
           <h2 class="description__title">
             Здесь можно оплатить
           </h2>
-          <h2 class="description__title" style="display: none;">
+          <h2 class="description__title description__title--mobile">
             Узнайте, как оплатить
           </h2>
           <nav class="menu">
@@ -101,15 +102,23 @@
           <li class="description__content" id="traffic">
             <div class="description__items">
               <div class="description__item">
-                <div class="description__help" style="display: none;">
-                  <img src="images/svg/ic_gibdd1.svg" class="description__img" alt="Жезл ГИБДД">
+
+                <div class="description__holder">
+
+                  <div class="description__help">
+                    <img src="images/svg/ic_gibdd1.svg" class="description__img" alt="Жезл ГИБДД">
+                  </div>
+                  <h3 class="description__subject">
+                    Штрафы ГИБДД
+                  </h3>
+
                 </div>
-                <h3 class="description__subject">
-                  Штрафы ГИБДД
-                </h3>
+                <span class="description__arrow"></span>
+
                 <div class="description__aside">
                   <p class="description__text">
-                    Для поиска укажите номера водительского удостоверения и свидетельства о регистрации ТС или номер
+                    Для поиска укажите номера водительского удостоверения и&nbsp;свидетельства о регистрации ТС или
+                    номер
                     штрафа.
                   </p>
                   <p class="description__text">
@@ -136,12 +145,19 @@
           <li class="description__content" id="courtDebts">
             <div class="description__items">
               <div class="description__item">
-                <div class="description__help" style="display: none;">
-                  <img src="images/svg/ic_fssp.svg" class="description__img" alt="Молоток судьи">
+
+                <div class="description__holder">
+
+                  <div class="description__help">
+                    <img src="images/svg/ic_fssp.svg" class="description__img" alt="Молоток судьи">
+                  </div>
+                  <h3 class="description__subject">
+                    Судебные задолженности
+                  </h3>
+
                 </div>
-                <h3 class="description__subject">
-                  Судебные задолженности
-                </h3>
+                <span class="description__arrow"></span>
+
                 <div class="description__aside">
                   <p class="description__text">
                     Для поиска начислений в ГИС ГМП укажите документы: паспорт РФ, ИНН, СНИЛС или номер
@@ -171,12 +187,19 @@
           <li class="description__content" id="taxes">
             <div class="description__items">
               <div class="description__item">
-                <div class="description__help" style="display: none;">
-                  <img src="images/svg/ic_nalog.svg" class="description__img" alt="Круговая диаграмма">
+
+                <div class="description__holder">
+
+                  <div class="description__help">
+                    <img src="images/svg/ic_nalog.svg" class="description__img" alt="Круговая диаграмма">
+                  </div>
+                  <h3 class="description__subject">
+                    Налоги
+                  </h3>
+
                 </div>
-                <h3 class="description__subject">
-                  Налоги
-                </h3>
+                <span class="description__arrow"></span>
+
                 <div class="description__aside">
                   <p class="description__text">
                     Для поиска начислений по налогам в ГИС ГМП укажите ИНН или Индекс налогового документа, если у вас
@@ -204,12 +227,19 @@
           <li class="description__content" id="services">
             <div class="description__items">
               <div class="description__item">
-                <div class="description__help" style="display: none;">
-                  <img src="images/svg/ic_rr.svg" class="description__img" alt="Услуги Росреестра">
+
+                <div class="description__holder">
+
+                  <div class="description__help">
+                    <img src="images/svg/ic_rr.svg" class="description__img" alt="Услуги Росреестра">
+                  </div>
+                  <h3 class="description__subject">
+                    Услуги Росреестра
+                  </h3>
+
                 </div>
-                <h3 class="description__subject">
-                  Услуги Росреестра
-                </h3>
+                <span class="description__arrow"></span>
+
                 <div class="description__aside">
                   <p class="description__text">
                     В поисковой строке укажите Код платежа, который был отправлен вам на&nbsp;почтовый ящик, указанный

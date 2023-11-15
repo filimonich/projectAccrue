@@ -11,6 +11,10 @@
 
   &__contents {
     padding: 89px 0 112px;
+
+    @include media('<=xxxs') {
+      padding: 39px 0 41px;
+    }
   }
 
   &__title {
@@ -19,15 +23,29 @@
       var(--unnamed-font-style-normal) normal var(--unnamed-font-size-36)/var(--unnamed-line-spacing-48) var(--unnamed-font-family-open-sans);
     letter-spacing: 1px;
     color: var(--unnamed-color-ffffff);
+
+
+    @include media('<=xxxs') {
+      margin-bottom: 19px;
+      text-align: center;
+      font:
+        var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-20)/27px var(--unnamed-font-family-open-sans);
+      letter-spacing: .5px;
+    }
   }
 
   &__inner {}
 
   &__form {
     display: flex;
+
+    @include media('<=xxxs') {
+      justify-content: center;
+    }
   }
 
   &__input {
+    position: relative;
     width: 804px;
     margin-bottom: 12px;
     margin-right: 17px;
@@ -49,6 +67,16 @@
     &:focus::placeholder {
       filter: opacity(50%);
     }
+
+    @include media('<=xxxs') {
+      width: 320px;
+      padding: 11px 40px 10px 10px;
+      margin-right: 0;
+      margin-bottom: 8px;
+      background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+      border: 2px solid var(--unnamed-color-00468533);
+      border-radius: 4px;
+    }
   }
 
   &__button {
@@ -68,6 +96,10 @@
     &:hover {
       background-color: #E1133F;
     }
+
+    @include media('<=xxxs') {
+      display: none;
+    }
   }
 
   &__text {
@@ -75,6 +107,12 @@
       var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/21px var(--unnamed-font-family-open-sans);
     letter-spacing: var(--unnamed-character-spacing-0);
     color: var(--unnamed-color-ffffff);
+
+    @include media('<=xxxs') {
+      font:
+        var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-12)/var(--unnamed-line-spacing-16) var(--unnamed-font-family-open-sans);
+      letter-spacing: var(--unnamed-character-spacing-0);
+    }
   }
 
 }

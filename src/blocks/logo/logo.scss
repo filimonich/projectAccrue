@@ -1,8 +1,11 @@
 .logo {
-	$self: &;
+  $self: &;
 
-	&__img {
+  &__img {
 
-	}
+    @include media('<=xxxs') {
+      width: 195px;
+    }
+  }
 
 }

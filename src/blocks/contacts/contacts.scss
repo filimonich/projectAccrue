@@ -6,6 +6,10 @@
   top: 17%;
   right: 2%;
 
+  @include media('<=xxxs') {
+    display: none;
+  }
+
   &__help {
     cursor: pointer;
 

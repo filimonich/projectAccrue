@@ -1,6 +1,13 @@
 .description {
   $self: &;
 
+  &.container {
+
+    @include media('<=xxxs') {
+      width: 100%;
+    }
+  }
+
   &__nav {
     display: flex;
     flex-direction: column;
@@ -14,9 +21,29 @@
       var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-36)/var(--unnamed-line-spacing-48) var(--unnamed-font-family-open-sans);
     letter-spacing: 1px;
     color: var(--unnamed-color-000000);
+
+    @include media('<=xxxs') {
+      display: none;
+      padding-top: 28px;
+    }
+
+    &--mobile {
+      display: none;
+
+      @include media('<=xxxs') {
+        display: block;
+        font:
+          var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-20)/27px var(--unnamed-font-family-open-sans);
+        letter-spacing: .5px;
+      }
+    }
   }
 
-  &__contents {}
+  &__contents {
+    // @include media('<=xxxs') {
+    //   padding-top: 2px;
+    // }
+  }
 
   &__content {
     position: relative;
@@ -89,6 +116,11 @@
         & #{$self}__subject {
           margin-bottom: 24px;
           letter-spacing: .6px;
+
+          // @include media('<=xxxs') {
+          // margin-bottom: 0;
+          // padding: 0 0 0 10px;
+          // }
         }
 
         & #{$self}__text {
@@ -98,12 +130,55 @@
         }
       }
     }
+
+    @include media('<=xxxs') {
+
+      &:nth-child(n) {
+        // padding-top: 5px;
+        // margin-bottom: 2px;
+
+        // height: 56px; удалить
+        margin-bottom: 0;
+        padding-top: 3px;
+
+        transition: .3s ease;
+
+        & #{$self}__content {
+          padding: 0;
+        }
+
+        &:nth-child(n) #{$self}__item {
+          padding-right: 0;
+          padding-left: 0;
+        }
+
+        &:nth-child(n) #{$self}__subject {
+          margin-bottom: 0;
+          letter-spacing: .4px;
+        }
+      }
+
+      &.active {
+        .description__arrow {
+          &:before {
+            transform: rotate(-180deg);
+          }
+        }
+
+        .description__aside {
+          // opacity: 0.3;
+          height: 108px;
+          padding-bottom: 40px;
+        }
+      }
+    }
   }
 
   &__items {
 
     @include media('<lg') {
       width: 120%;
+      // height: 54px; удалить
     }
   }
 
@@ -111,15 +186,87 @@
     padding-right: 36px;
   }
 
-  &__help {}
+  &__holder {
+
+    @include media('<=xxxs') {
+      display: flex;
+      align-items: center;
+      text-align: left;
+      height: 38px;
+      margin: 0;
+      padding-top: 13px;
+      cursor: pointer;
+      transition: .3s ease;
+
+      // &:hover {
+      //   filter: opacity(50%);
+      // }
+    }
+  }
+
+  &__help {
+    display: none;
+
+    @include media('<=xxxs') {
+      display: block;
+      margin-right: 20px;
+      margin-left: 14px;
+    }
+  }
 
   &__subject {
     margin-bottom: 22px;
 
     font:
       var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-25)/var(--unnamed-line-spacing-32) var(--unnamed-font-family-open-sans);
-    letter-spacing: 0.8px;
+    letter-spacing: .8px;
     color: var(--unnamed-color-000000);
+
+    @include media('<=xxxs') {
+      margin-bottom: 0;
+      white-space: nowrap;
+      font:
+        var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-open-sans);
+      letter-spacing: .4px;
+      color: var(--unnamed-color-004685);
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+      border-bottom: 1px dotted #00468575;
+      line-height: 21px;
+    }
+  }
+
+  &__arrow {
+    display: none;
+
+    @include media('<=xxxs') {
+      width: 13px;
+      height: 13px;
+      display: inline-block;
+      position: relative;
+      top: -17px;
+      right: 4.7%;
+      transition: 0.3s ease;
+      margin-top: 2px;
+      text-align: left;
+      transform: rotate(0deg);
+      float: right;
+
+      &:before {
+        position: absolute;
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 3px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 4.5px 0 4.5px;
+        border-color: #004685 transparent transparent transparent;
+        transition: transform .3s;
+      }
+    }
   }
 
   &__aside {
@@ -127,11 +274,27 @@
       var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-open-sans);
     letter-spacing: var(--unnamed-character-spacing-0);
     color: var(--unnamed-color-000000);
+
+    @include media('<=xxxs') {
+      margin: 0 auto;
+      padding-top: 14px;
+      // padding: 26px 3px 0 20px; это не трогать
+
+      height: 0;
+      overflow: hidden;
+      opacity: 1;
+      transition: .3s ease;
+      border-bottom: 1px solid var(--unnamed-color-00468533);
+    }
   }
 
   &__text {
     display: block;
     margin-bottom: 12px;
+
+    // &:nth-child(1) {
+    //   margin-bottom: 4px;
+    // }
 
     &:nth-child(2) {
       margin-bottom: 35px;
@@ -144,6 +307,25 @@
       letter-spacing: var(--unnamed-character-spacing-0);
       color: var(--unnamed-color-004685);
     }
+
+    @include media('<=xxxs') {
+
+      padding: 26px 4px 0 20px;
+
+      &:nth-child(1) {
+        margin-bottom: 0;
+        padding-top: 12px;
+      }
+
+      &:nth-child(2) {
+        margin-bottom: 0;
+        padding-top: 12px;
+      }
+
+      &:nth-child(4) {
+        padding-top: 0;
+      }
+    }
   }
 
   &__subtitle {
@@ -151,13 +333,39 @@
       var(--unnamed-font-style-normal) normal bold var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-open-sans);
     letter-spacing: .4px;
     color: var(--unnamed-color-d30531);
+
+    @include media('<=xxxs') {
+      padding: 22px 4px 0 20px;
+    }
+
+  }
+
+  &__text,
+  &__subtitle {
+
+    @include media('<=xxxs') {
+      list-style-type: none;
+      margin: 0 auto;
+      // padding: 26px 4px 0 20px;
+      text-align: left;
+      cursor: pointer;
+    }
   }
 
   &__box {
     position: relative;
     display: block;
     width: 72%;
+
+    @include media('<=xxxs') {
+      display: none;
+    }
   }
 
   &__img {}
+
+  &__holder:hover,
+  &__holder:hover+&__arrow {
+    filter: opacity(50%);
+  }
 }

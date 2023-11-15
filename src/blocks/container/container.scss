@@ -9,4 +9,8 @@
   @include media('<lg') {
     width: 95%;
   }
+
+  @include media('<=xxxs') {
+    width: 89%;
+  }
 }

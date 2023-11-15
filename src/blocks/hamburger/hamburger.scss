@@ -3,8 +3,8 @@
 
   z-index: 15;
   position: absolute;
-  flex-direction: column;
-  justify-content: space-between;
+  // flex-direction: column;
+  // justify-content: space-between;
   display: block;
   top: 33%;
   left: 2.6%;
@@ -12,6 +12,12 @@
   height: 23px;
   cursor: pointer;
   transition: all .3s;
+
+  @include media('<=xxxs') {
+    left: 88%;
+    width: 22.5px;
+    height: 17.25px;
+  }
 
   &:hover {
     filter: opacity(50%);
@@ -58,6 +64,11 @@
     &:nth-child(2) {
       top: 56%;
       transform: rotate(45deg);
+
+      @include media('<=xxxs') {
+        top: 42%;
+        left: -3%;
+      }
     }
 
     &:nth-child(3) {
