@@ -45,6 +45,15 @@
     &--close {
       transition: transform .6s ease, opacity .6s ease;
     }
+
+    @include media('<=xxxs') {
+      transform: translateX(130%);
+
+      &--active {
+        transform: translateX(30%);
+      }
+    }
+
   }
 
   &__title {

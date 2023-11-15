@@ -37,6 +37,7 @@
   &__inner {}
 
   &__form {
+    position: relative;
     display: flex;
 
     @include media('<=xxxs') {
@@ -76,6 +77,22 @@
       background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
       border: 2px solid var(--unnamed-color-00468533);
       border-radius: 4px;
+    }
+  }
+
+  &__search-icon {
+    display: none;
+
+    @include media('<=xxxs') {
+      position: absolute;
+      display: block;
+      top: 20%;
+      right: 6%;
+      cursor: pointer;
+
+      &:hover {
+        filter: opacity(50%);
+      }
     }
   }
 

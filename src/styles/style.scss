@@ -128,8 +128,9 @@
 $breakpoints: (
   'xxxs': 360px,
   'xxs': 480px,
-  'xs': 640px,
-  'sm': 800px,
+  // 'xs': 640px,
+  'xs': 799.9px,
+  'sm': 840px,
   // 'sm': 780px,
   // 'sm': 800, // ?
   'md': 960px,
