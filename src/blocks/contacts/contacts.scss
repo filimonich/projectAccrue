@@ -58,9 +58,10 @@
   &__tel {
     margin-bottom: 21px;
     font:
-      var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) 28px/37px var(--unnamed-font-family-open-sans);
+      var(--unnamed-font-style-normal) normal var(--unnamed-font-style-normal) 28px/37px var(--unnamed-font-family-open-sans);
     letter-spacing: var(--unnamed-character-spacing-0);
     color: var(--unnamed-color-000000);
+    white-space: nowrap;
   }
 
   &__link {

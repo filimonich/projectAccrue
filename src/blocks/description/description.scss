@@ -365,7 +365,6 @@
   &__img {}
 
   @include media('<=xs') {
-
     &__holder:hover,
     &__holder:hover+&__arrow {
       filter: opacity(50%);
