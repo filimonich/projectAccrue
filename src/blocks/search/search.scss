@@ -81,6 +81,10 @@
       border: 2px solid var(--unnamed-color-00468533);
       border-radius: 4px;
     }
+
+    @media screen and (max-width: 320px) {
+      width: 290px;
+    }
   }
 
   &__search-icon {
