@@ -7,7 +7,6 @@
 
   &__main {
     z-index: 10;
-    // display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -27,6 +26,15 @@
     background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
     transform: translate(-50%, -50%);
+
+    @include media('<=xs') {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    @include media('<=xxxs') {
+      padding: 23px 20px;
+    }
   }
 
   &__content--login {}
@@ -62,6 +70,10 @@
       var(--unnamed-font-style-normal) normal bold var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-open-sans);
     letter-spacing: var(--unnamed-character-spacing-0);
     color: var(--unnamed-color-000000);
+    
+    @include media('<=xxxs') {
+      letter-spacing: .7px;
+    }
   }
 
   &__form {
@@ -130,6 +142,7 @@
     letter-spacing: var(--unnamed-character-spacing-0);
     color: var(--unnamed-color-004685);
     line-height: 18px;
+    cursor: pointer;
 
     &:first-child {
       margin-bottom: 20px;
@@ -139,6 +152,10 @@
       display: inline-block;
       text-decoration: none;
       border-bottom: 1px dotted #000;
+    }
+
+    &:hover {
+      filter: opacity(50%);
     }
   }
 

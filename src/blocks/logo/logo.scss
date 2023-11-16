@@ -3,7 +3,7 @@
 
   &__img {
 
-    @include media('<=xxxs') {
+    @include media('<=xs') {
       width: 195px;
     }
   }

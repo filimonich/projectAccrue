@@ -11,7 +11,7 @@
   padding: 12px 35px 8px 0;
   background: var(--unnamed-color-ffffff);
 
-  @include media('<=xxxs') {
+  @include media('<=xs') {
     justify-content: flex-start;
     padding: 10px 15px 6px;
   }
@@ -44,6 +44,54 @@
 
     &--close {
       transition: transform .6s ease, opacity .6s ease;
+    }
+
+    @include media('<=xs') {
+      transform: translateX(290%);
+
+      &--active {
+        transform: translateX(65vw);
+      }
+    }
+
+    @include media('<=xss') {
+      transform: translateX(290%);
+
+      &--active {
+        transform: translateX(60vw);
+      }
+    }
+
+    @include media('<=xsss') {
+      transform: translateX(290%);
+
+      &--active {
+        transform: translateX(54vw);
+      }
+    }
+
+    @include media('<=xssss') {
+      transform: translateX(290%);
+
+      &--active {
+        transform: translateX(47vw);
+      }
+    }
+
+    @include media('<=xxs') {
+      transform: translateX(290%);
+
+      &--active {
+        transform: translateX(42vw);
+      }
+    }
+
+    @include media('<=xxss') {
+      transform: translateX(290%);
+
+      &--active {
+        transform: translateX(32vw);
+      }
     }
 
     @include media('<=xxxs') {

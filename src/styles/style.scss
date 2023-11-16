@@ -15,10 +15,8 @@
   --unnamed-color-569ddc: #569DDC;
 
   /* Font/text values */
-  // --unnamed-font-family-open-sans: Open Sans;
   --unnamed-font-family-open-sans: "OS-R";
   --unnamed-font-style-normal: normal;
-  // --unnamed-font-weight-600: 600px;
   --unnamed-font-weight-600: 600;
   --unnamed-font-weight-normal: normal;
   --unnamed-font-size-12: 12px;
@@ -35,88 +33,6 @@
   --unnamed-decoration-underline: underline;
 }
 
-/* Character Styles */
-@mixin unnamed-character-style-1 {
-  font-family: var(--unnamed-font-family-open-sans);
-  font-style: var(--unnamed-font-style-normal);
-  font-weight: var(--unnamed-font-weight-normal);
-  font-size: var(--unnamed-font-size-16);
-  line-height: var(--unnamed-line-spacing-24);
-  letter-spacing: var(--unnamed-character-spacing-0);
-  color: var(--unnamed-color-004685);
-  text-decoration: var(--unnamed-decoration-underline);
-}
-
-@mixin unnamed-character-style-2 {
-  font-family: var(--unnamed-font-family-open-sans);
-  font-style: var(--unnamed-font-style-normal);
-  font-weight: var(--unnamed-font-weight-600);
-  font-size: var(--unnamed-font-size-12);
-  line-height: var(--unnamed-line-spacing-16);
-  letter-spacing: var(--unnamed-character-spacing-0);
-  color: var(--unnamed-color-000000);
-}
-
-@mixin unnamed-character-style-3 {
-  font-family: var(--unnamed-font-family-open-sans);
-  font-style: var(--unnamed-font-style-normal);
-  font-weight: var(--unnamed-font-weight-600);
-  font-size: var(--unnamed-font-size-25);
-  line-height: var(--unnamed-line-spacing-32);
-  letter-spacing: var(--unnamed-character-spacing-0);
-  color: var(--unnamed-color-000000);
-}
-
-@mixin unnamed-character-style-4 {
-  font-family: var(--unnamed-font-family-open-sans);
-  font-style: var(--unnamed-font-style-normal);
-  font-weight: var(--unnamed-font-weight-normal);
-  font-size: var(--unnamed-font-size-20);
-  line-height: var(--unnamed-line-spacing-30);
-  letter-spacing: var(--unnamed-character-spacing-0);
-  color: var(--unnamed-color-004685);
-}
-
-@mixin unnamed-character-style-5 {
-  font-family: var(--unnamed-font-family-open-sans);
-  font-style: var(--unnamed-font-style-normal);
-  font-weight: var(--unnamed-font-weight-600);
-  font-size: var(--unnamed-font-size-36);
-  line-height: var(--unnamed-line-spacing-48);
-  letter-spacing: var(--unnamed-character-spacing-0);
-  color: var(--unnamed-color-000000);
-}
-
-@mixin unnamed-character-style-6 {
-  font-family: var(--unnamed-font-family-open-sans);
-  font-style: var(--unnamed-font-style-normal);
-  font-weight: var(--unnamed-font-weight-600);
-  font-size: var(--unnamed-font-size-36);
-  line-height: var(--unnamed-line-spacing-48);
-  letter-spacing: var(--unnamed-character-spacing-0);
-  color: var(--unnamed-color-ffffff);
-}
-
-@mixin unnamed-character-style-7 {
-  font-family: var(--unnamed-font-family-open-sans);
-  font-style: var(--unnamed-font-style-normal);
-  font-weight: var(--unnamed-font-weight-normal);
-  font-size: var(--unnamed-font-size-16);
-  line-height: var(--unnamed-line-spacing-24);
-  letter-spacing: var(--unnamed-character-spacing-0);
-  color: var(--unnamed-color-004685);
-}
-
-@mixin unnamed-character-style-8 {
-  font-family: var(--unnamed-font-family-open-sans);
-  font-style: var(--unnamed-font-style-normal);
-  font-weight: var(--unnamed-font-weight-normal);
-  font-size: var(--unnamed-font-size-16);
-  line-height: var(--unnamed-line-spacing-24);
-  letter-spacing: var(--unnamed-character-spacing-0);
-  color: var(--unnamed-color-000000);
-}
-
 // вызов показа текущего диапазона
 // body {
 //   @include screen-media();
@@ -125,14 +41,14 @@
 // Import media-query helper
 @import "../../node_modules/include-media/dist/_include-media.scss";
 
-$breakpoints: (
-  'xxxs': 360px,
+$breakpoints: ('xxxs': 360px,
+  'xxss': 410px,
   'xxs': 480px,
-  // 'xs': 640px,
+  'xssss': 520px,
+  'xsss': 600px,
+  'xss': 690px,
   'xs': 799.9px,
   'sm': 840px,
-  // 'sm': 780px,
-  // 'sm': 800, // ?
   'md': 960px,
   'lg': 1100px,
   'xlg': 1280px,
@@ -152,14 +68,24 @@ $breakpoints: (
 
 // Определяем анимацию затухания  
 @keyframes fadeOut {
-  from {opacity: 1;}
-  to {opacity: 0;}
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
 
 // Определяем анимацию проявления 
 @keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 body,

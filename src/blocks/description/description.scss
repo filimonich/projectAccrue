@@ -3,7 +3,7 @@
 
   &.container {
 
-    @include media('<=xxxs') {
+    @include media('<=xs') {
       width: 100%;
     }
   }
@@ -22,7 +22,7 @@
     letter-spacing: 1px;
     color: var(--unnamed-color-000000);
 
-    @include media('<=xxxs') {
+    @include media('<=xs') {
       display: none;
       padding-top: 28px;
     }
@@ -30,7 +30,7 @@
     &--mobile {
       display: none;
 
-      @include media('<=xxxs') {
+      @include media('<=xs') {
         display: block;
         font:
           var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-20)/27px var(--unnamed-font-family-open-sans);
@@ -40,7 +40,7 @@
   }
 
   &__contents {
-    // @include media('<=xxxs') {
+    // @include media('<=xs') {
     //   padding-top: 2px;
     // }
   }
@@ -117,7 +117,7 @@
           margin-bottom: 24px;
           letter-spacing: .6px;
 
-          // @include media('<=xxxs') {
+          // @include media('<=xs') {
           // margin-bottom: 0;
           // padding: 0 0 0 10px;
           // }
@@ -131,7 +131,7 @@
       }
     }
 
-    @include media('<=xxxs') {
+    @include media('<=xs') {
 
       &:nth-child(n) {
         // padding-top: 5px;
@@ -188,7 +188,7 @@
 
   &__holder {
 
-    @include media('<=xxxs') {
+    @include media('<=xs') {
       display: flex;
       align-items: center;
       text-align: left;
@@ -207,7 +207,7 @@
   &__help {
     display: none;
 
-    @include media('<=xxxs') {
+    @include media('<=xs') {
       display: block;
       margin-right: 20px;
       margin-left: 14px;
@@ -222,7 +222,7 @@
     letter-spacing: .8px;
     color: var(--unnamed-color-000000);
 
-    @include media('<=xxxs') {
+    @include media('<=xs') {
       margin-bottom: 0;
       white-space: nowrap;
       font:
@@ -240,7 +240,7 @@
   &__arrow {
     display: none;
 
-    @include media('<=xxxs') {
+    @include media('<=xs') {
       width: 13px;
       height: 13px;
       display: inline-block;
@@ -275,7 +275,7 @@
     letter-spacing: var(--unnamed-character-spacing-0);
     color: var(--unnamed-color-000000);
 
-    @include media('<=xxxs') {
+    @include media('<=xs') {
       margin: 0 auto;
       padding-top: 14px;
       // padding: 26px 3px 0 20px; это не трогать
@@ -308,7 +308,7 @@
       color: var(--unnamed-color-004685);
     }
 
-    @include media('<=xxxs') {
+    @include media('<=xs') {
 
       padding: 26px 4px 0 20px;
 
@@ -334,7 +334,7 @@
     letter-spacing: .4px;
     color: var(--unnamed-color-d30531);
 
-    @include media('<=xxxs') {
+    @include media('<=xs') {
       padding: 22px 4px 0 20px;
     }
 
@@ -343,7 +343,7 @@
   &__text,
   &__subtitle {
 
-    @include media('<=xxxs') {
+    @include media('<=xs') {
       list-style-type: none;
       margin: 0 auto;
       // padding: 26px 4px 0 20px;
@@ -357,7 +357,7 @@
     display: block;
     width: 72%;
 
-    @include media('<=xxxs') {
+    @include media('<=xs') {
       display: none;
     }
   }

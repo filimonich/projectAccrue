@@ -7,7 +7,7 @@
     justify-content: space-evenly;
     width: 590px;
 
-    @include media('<=xxxs') {
+    @include media('<=xs') {
       display: none;
     }
 

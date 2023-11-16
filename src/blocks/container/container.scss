@@ -10,7 +10,7 @@
     width: 95%;
   }
 
-  @include media('<=xxxs') {
+  @include media('<=xs') {
     width: 89%;
   }
 }

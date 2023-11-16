@@ -3,13 +3,13 @@
 
   margin-bottom: 60px;
 
-  @include media('<=xxxs') {
+  @include media('<=xs') {
     margin-bottom: 34px;
   }
 
   &.container {
 
-    @include media('<=xxxs') {
+    @include media('<=xs') {
       width: 96%;
     }
   }
@@ -24,7 +24,7 @@
     letter-spacing: .8px;
     color: var(--unnamed-color-000000);
 
-    @include media('<=xxxs') {
+    @include media('<=xs') {
       padding-top: 27px;
       font:
         var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-20)/27px var(--unnamed-font-family-open-sans);
@@ -44,7 +44,7 @@
       justify-content: space-evenly;
     }
 
-    @include media('<=xxxs') {
+    @include media('<=xs') {
       padding-top: 0;
       justify-content: space-around;
     }
@@ -57,7 +57,7 @@
       width: 38%;
     }
 
-    @include media('<=xxxs') {
+    @include media('<=xs') {
       padding-top: 27px;
       width: 148px;
 
@@ -84,7 +84,7 @@
     letter-spacing: .2px;
     color: var(--unnamed-color-000000);
 
-    @include media('<=xxxs') {
+    @include media('<=xs') {
       padding-top: 4px;
       font:
         var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-12)/var(--unnamed-line-spacing-16) var(--unnamed-font-family-open-sans);

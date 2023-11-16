@@ -12,7 +12,10 @@
   &__contents {
     padding: 89px 0 112px;
 
-    @include media('<=xxxs') {
+    @include media('<=xs') {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       padding: 39px 0 41px;
     }
   }
@@ -25,7 +28,7 @@
     color: var(--unnamed-color-ffffff);
 
 
-    @include media('<=xxxs') {
+    @include media('<=xs') {
       margin-bottom: 19px;
       text-align: center;
       font:
@@ -40,7 +43,7 @@
     position: relative;
     display: flex;
 
-    @include media('<=xxxs') {
+    @include media('<=xs') {
       justify-content: center;
     }
   }
@@ -69,7 +72,7 @@
       filter: opacity(50%);
     }
 
-    @include media('<=xxxs') {
+    @include media('<=xs') {
       width: 320px;
       padding: 11px 40px 10px 10px;
       margin-right: 0;
@@ -83,7 +86,7 @@
   &__search-icon {
     display: none;
 
-    @include media('<=xxxs') {
+    @include media('<=xs') {
       position: absolute;
       display: block;
       top: 20%;
@@ -114,7 +117,7 @@
       background-color: #E1133F;
     }
 
-    @include media('<=xxxs') {
+    @include media('<=xs') {
       display: none;
     }
   }
@@ -125,7 +128,7 @@
     letter-spacing: var(--unnamed-character-spacing-0);
     color: var(--unnamed-color-ffffff);
 
-    @include media('<=xxxs') {
+    @include media('<=xs') {
       font:
         var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-12)/var(--unnamed-line-spacing-16) var(--unnamed-font-family-open-sans);
       letter-spacing: var(--unnamed-character-spacing-0);
